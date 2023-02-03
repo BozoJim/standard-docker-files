@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  factorio:
+    image: factoriotools/factorio
+    container_name: factorio
+    restart: unless-stopped
+    environment:
+      - UPDATE_MODS_ON_START=true
+    ports:
+      - 34197:34197/udp
+    volumes:
+     - ./factorio:/factorio
